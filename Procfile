@@ -1,1 +1,1 @@
-web: waitress-serve --listen=*:8000 django_project.wsgi:application
+web: gunicorn django_project.wsgi
