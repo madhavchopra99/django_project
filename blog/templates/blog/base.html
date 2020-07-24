@@ -30,9 +30,9 @@
         <div class="navbar-nav mr-auto">
           <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
           <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>&nbsp&nbsp
-    <form class="form-inline" id="searchform" action="{% url 'post-search' %}" method="get" accept-charset="utf-8">
-      <input class="form-control form-control-sm" id="searchbox" name="q" type="text" placeholder="Search">
-      &nbsp&nbsp
+    <form id="searchform" action="{% url 'post-search' %}" method="get" accept-charset="utf-8">
+      <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
+
       <button class="btn btn-secondary btn-sm" type="submit">
           Search
       </button>
