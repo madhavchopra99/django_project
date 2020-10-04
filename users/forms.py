@@ -5,29 +5,30 @@ from .models import Profile
 
 class UserRegisterForm(UserCreationForm):
 
-	email = forms.EmailField()
-	first_name = forms.CharField()
-	last_name = forms.CharField(required=False)
+    email = forms.EmailField()
+    first_name = forms.CharField()
+    last_name = forms.CharField(required=False)
 
-	class Meta(object):
-		"""docstring for Meta"""
+    class Meta(object):
+        """docstring for Meta"""
 
-		model = User
-		fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2', ]
+        model = User
+        fields = ['username', 'first_name', 'last_name',
+                  'email', 'password1', 'password2', ]
 
 
 class UserUpdateForm(forms.ModelForm):
-	email = forms.EmailField()
+    email = forms.EmailField()
 
-	class Meta:
-		model = User
+    class Meta:
+        model = User
 
-		fields = ['username', 'first_name', 'last_name', 'email']
+        fields = ['username', 'first_name', 'last_name', 'email']
 
 
 class ProfileUpdateForm(forms.ModelForm):
 
-	class Meta:
+    class Meta:
 
-		model = Profile
-		fields = ['image']
+        model = Profile
+        fields = ['image']
