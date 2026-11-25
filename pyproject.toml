@@ -2,7 +2,7 @@
 name = "django_project"
 version = "0.1.0"
 description = "Django Blog Application - A fully functional blog site with user authentication, blog post management, comments, and user profiles"
-requires-python = ">=3.14"
+requires-python = ">=3.15"
 dependencies = [
     "asgiref==3.13.0",
     "Django==6.1.3",

@@ -18,8 +18,8 @@ This is a fully functional blog site built with Django, featuring user authentic
 
 ## Technologies
 
-- Python 3.8+
-- Django 3.0+
+- Python 3.15+
+- Django 6.1.3+
 - SQLite (default database)
 - Bootstrap 4 (via crispy forms)
 - PIL/Pillow for image processing
@@ -66,11 +66,11 @@ django_project/
 
 ## Prerequisites
 
-- Python 3.8 or higher
-- Django 3.0 or higher
+- Python 3.15 or higher
+- Django 6.1.3 or higher
 - Git
 - SQLite3
-- ImageMagick (for profile picture processing)
+- Pillow (for image processing)
 
 ## Installation
 
