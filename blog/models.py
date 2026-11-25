@@ -1,11 +1,12 @@
-from django.db import models
-from django.utils import timezone
 from django.contrib.auth.models import User
+from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 
 class Post(models.Model):
     """docstring for Post"""
+
     title = models.CharField(max_length=100)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
@@ -15,20 +16,20 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post-detail', kwargs={'pk': self.pk})
+        return reverse("post-detail", kwargs={"pk": self.pk})
+
 
 class Comment(models.Model):
-
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     content = models.CharField(max_length=250)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.author.username} Commented on {self.post.title} at {self.post.date_posted}'
+        return f"{self.author.username} Commented on {self.post.title} at {self.post.date_posted}"
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('post-detail', kwargs={'pk': self.post.id})
+        return reverse("post-detail", kwargs={"pk": self.post.id})
