@@ -11,4 +11,5 @@ dependencies = [
     "Pillow==13.0.0",
     "pytz==2026.6",
     "sqlparse==0.6.1",
+    "python-dotenv==1.2.4",
 ]

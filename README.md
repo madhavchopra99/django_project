@@ -101,7 +101,7 @@ Create a `.env` file in the project root with the following variables:
 ```env
 EMAIL_ID=your_email@gmail.com
 EMAIL_PASS=your_email_password
-SECRET_KEY='ohbe@gs6gt80vnc^fw1@ijw@o+kmk6dnnwuf-!t&9r!+lpk%$*'
+SECRET_KEY='your_secret_key_here'
 DEBUG=True
 ALLOWED_HOSTS=
 ```
